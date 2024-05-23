@@ -1,7 +1,7 @@
 
-mod problem5;
-use problem5::main5;
+mod problem6;
+use problem6::main6;
 fn main() {
-    let resultat = main5();
+    let resultat = main6();
     println!("le résultat est : {}", resultat);
 }

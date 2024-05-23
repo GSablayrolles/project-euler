@@ -1,4 +1,4 @@
-fn main() {
+pub fn main2() -> u32 {
     let mut f: u32 = 1;
     let mut f_2: u32 = 1;
     let mut sum: u32 = 0;
@@ -14,5 +14,5 @@ fn main() {
         f_2 = old;
     }
 
-    println!("Somme : {sum}");
+    return u32
 }

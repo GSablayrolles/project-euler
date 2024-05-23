@@ -1,4 +1,4 @@
-fn main() {
+pub fn main1() -> u32 {
     let mut sum: u32 = 0;
 
     for i in 3..1000 {
@@ -6,5 +6,5 @@ fn main() {
             sum += i;
         }
     }
-    println!("Somme : {sum}");
+    return sum;    
 }

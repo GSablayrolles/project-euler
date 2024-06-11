@@ -29,7 +29,7 @@ NIX_BINTOOLS='/nix/store/m3gq2f6iwh3g67zrs27m7w82b37l8gf8-binutils-wrapper-2.41'
 export NIX_BINTOOLS
 NIX_BINTOOLS_WRAPPER_TARGET_HOST_x86_64_unknown_linux_gnu='1'
 export NIX_BINTOOLS_WRAPPER_TARGET_HOST_x86_64_unknown_linux_gnu
-NIX_BUILD_CORES='16'
+NIX_BUILD_CORES='12'
 export NIX_BUILD_CORES
 NIX_CC='/nix/store/md6hh4rrcrf99nssvcam3qaqs3skj086-gcc-wrapper-13.2.0'
 export NIX_CC
@@ -41,7 +41,7 @@ NIX_ENFORCE_NO_NATIVE='1'
 export NIX_ENFORCE_NO_NATIVE
 NIX_HARDENING_ENABLE='bindnow format fortify fortify3 pic relro stackprotector strictoverflow'
 export NIX_HARDENING_ENABLE
-NIX_LDFLAGS='-rpath /home/guillaume/Src/Code/Project-Euler/outputs/out/lib  -L/nix/store/3lv8aqynwbx11466hlpz3q4aj0hf7js8-rust-mixed/lib -L/nix/store/3lv8aqynwbx11466hlpz3q4aj0hf7js8-rust-mixed/lib'
+NIX_LDFLAGS='-rpath /home/guillaume/Src/Code/project-euler/outputs/out/lib  -L/nix/store/3lv8aqynwbx11466hlpz3q4aj0hf7js8-rust-mixed/lib -L/nix/store/3lv8aqynwbx11466hlpz3q4aj0hf7js8-rust-mixed/lib'
 export NIX_LDFLAGS
 NIX_NO_SELF_RPATH='1'
 NIX_STORE='/nix/store'
@@ -127,7 +127,7 @@ declare -a envHostHostHooks=('ccWrapper_addCVars' 'bintoolsWrapper_addLDVars' )
 declare -a envHostTargetHooks=('ccWrapper_addCVars' 'bintoolsWrapper_addLDVars' )
 declare -a envTargetTargetHooks=()
 declare -a fixupOutputHooks=('if [ -z "${dontPatchELF-}" ]; then patchELF "$prefix"; fi' 'if [[ -z "${noAuditTmpdir-}" && -e "$prefix" ]]; then auditTmpdir "$prefix"; fi' 'if [ -z "${dontGzipMan-}" ]; then compressManPages "$prefix"; fi' '_moveLib64' '_moveSbin' '_moveSystemdUserUnits' 'patchShebangsAuto' '_pruneLibtoolFiles' '_doStrip' )
-guess='16'
+guess='12'
 initialPath='/nix/store/ddypgcb25zgi0gwvklxlzazjrh9s63dg-coreutils-9.5 /nix/store/y21vimynf3h666dvi4z8abzphw8ibibj-findutils-4.9.0 /nix/store/4crhxg3dmy1n16h55rk6banv5xssmsyp-diffutils-3.10 /nix/store/4cps736z7in3d37qc801lwv9z0ib67ps-gnused-4.9 /nix/store/wy37jk2hirzqzx0666w1849kjdgzdam6-gnugrep-3.11 /nix/store/a2ffqcqzbp8k4fmkyhpjq2km0i9wr8d8-gawk-5.2.2 /nix/store/4m4vnjdy44s4sb8hlv4qsph492zz3rly-gnutar-1.35 /nix/store/hragmx5p3izmwinv4441hj5706sxy4xs-gzip-1.13 /nix/store/5giwsjx504zrgzl7cjzxm0s1423wndif-bzip2-1.0.8-bin /nix/store/qwcdasr63dfp74g7djazx48fx9s28i7a-gnumake-4.4.1 /nix/store/h3bhzvz9ipglcybbcvkxvm4vg9lwvqg4-bash-5.2p26 /nix/store/lj804cdk0fcf9yhgqrvgaqv2dc3lmfgp-patch-2.7.6 /nix/store/3iiml9pwff4y6zsis1gp4apbry1h1wfr-xz-5.4.6-bin /nix/store/kaiq352476xq7zb1p06yranc5j3jjlz2-file-5.45'
 mesonFlags=''
 export mesonFlags
@@ -135,7 +135,7 @@ name='nix-shell-env'
 export name
 nativeBuildInputs='/nix/store/3lv8aqynwbx11466hlpz3q4aj0hf7js8-rust-mixed /nix/store/26pddawzavjfnfnnglq4l7f8bkh2hf57-nil-2023-08-09 /nix/store/rvh8h9wnzx68ilsa1qnsa328vgjp0xiq-alejandra-3.0.0 /nix/store/ppv5lzbrxrbznpa2mvlbi5i49yagjimx-perf-linux-6.8.6'
 export nativeBuildInputs
-out='/home/guillaume/Src/Code/Project-Euler/outputs/out'
+out='/home/guillaume/Src/Code/project-euler/outputs/out'
 export out
 outputBin='out'
 outputDev='out'
@@ -166,7 +166,7 @@ preConfigurePhases=' updateAutotoolsGnuConfigScriptsPhase'
 declare -a preFixupHooks=('_moveToShare' '_multioutDocs' '_multioutDevs' )
 preferLocalBuild='1'
 export preferLocalBuild
-prefix='/home/guillaume/Src/Code/Project-Euler/outputs/out'
+prefix='/home/guillaume/Src/Code/project-euler/outputs/out'
 declare -a propagatedBuildDepFiles=('propagated-build-build-deps' 'propagated-native-build-inputs' 'propagated-build-target-deps' )
 propagatedBuildInputs=''
 export propagatedBuildInputs
